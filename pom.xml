@@ -19,20 +19,13 @@
     </description>
     <url>https://github.com/GedMarc/GuicedPersistence-C3P0</url>
 
-    <repositories>
-        <repository>
-            <id>jwebmp-snapshot</id>
-            <name>JWebMPArtifactory-snapshots</name>
-            <url>https://jwebmp.com/artifactory/libs-snapshot</url>
-        </repository>
-    </repositories>
-
     <dependencies>
         <dependency>
             <groupId>com.jwebmp</groupId>
             <artifactId>guiced-persistence</artifactId>
             <version>${project.version}</version>
             <classifier>${jwebmp.runtime.classifier}</classifier>
+            <type>jar</type>
         </dependency>
 
         <dependency>
