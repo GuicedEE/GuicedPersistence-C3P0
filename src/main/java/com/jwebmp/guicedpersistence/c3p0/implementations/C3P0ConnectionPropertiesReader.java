@@ -1,6 +1,7 @@
 package com.jwebmp.guicedpersistence.c3p0.implementations;
 
 import com.jwebmp.guicedpersistence.db.PropertiesEntityManagerReader;
+import com.oracle.jaxb21.PersistenceUnit;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,7 +28,7 @@ public class C3P0ConnectionPropertiesReader
 	private static int defaultTimeout = 1800;
 
 	@Override
-	public Map<String, String> processProperties(Properties properties)
+	public Map<String, String> processProperties(PersistenceUnit persistenceUnit, Properties properties)
 	{
 		Map<String, String> props = new HashMap<>();
 		if (!properties.containsKey(minSize))
