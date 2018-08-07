@@ -22,6 +22,32 @@
     <dependencies>
         <dependency>
             <groupId>com.jwebmp</groupId>
+            <artifactId>guiced-persistence-jpa</artifactId>
+            <classifier>${jwebmp.runtime.classifier}</classifier>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jwebmp</groupId>
+            <artifactId>jwebmp-log-master</artifactId>
+            <version>${project.version}</version>
+            <classifier>${jwebmp.runtime.classifier}</classifier>
+            <optional>true</optional>
+            <type>jar</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jwebmp</groupId>
+            <artifactId>guiced-injection</artifactId>
+            <version>${project.version}</version>
+            <classifier>${jwebmp.runtime.classifier}</classifier>
+            <optional>true</optional>
+            <type>jar</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jwebmp</groupId>
             <artifactId>guiced-persistence</artifactId>
             <version>${project.version}</version>
             <classifier>${jwebmp.runtime.classifier}</classifier>
@@ -69,29 +95,6 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-c3p0</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.jwebmp</groupId>
-            <artifactId>guiced-persistence-jpa</artifactId>
-            <classifier>${jwebmp.runtime.classifier}</classifier>
-            <version>${project.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.jwebmp</groupId>
-            <artifactId>jwebmp-log-master</artifactId>
-            <version>${project.version}</version>
-            <classifier>${jwebmp.runtime.classifier}</classifier>
-            <scope>test</scope>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>com.jwebmp</groupId>
-            <artifactId>guiced-injection</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
-            <type>jar</type>
         </dependency>
 
     </dependencies>
