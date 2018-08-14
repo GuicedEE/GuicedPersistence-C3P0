@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>com.jwebmp</groupId>
-        <artifactId>jwebmp-bom</artifactId>
+        <artifactId>jwebmp-parent</artifactId>
         <version>0.0.0_0-SNAPSHOT</version>
     </parent>
 
@@ -117,10 +117,10 @@
         <profile>
             <id>jdk8</id>
             <dependencies>
-				<dependency>
-					<groupId>javax.transaction</groupId>
-					<artifactId>jta</artifactId>
-				</dependency>
+                <dependency>
+                    <groupId>javax.transaction</groupId>
+                    <artifactId>jta</artifactId>
+                </dependency>
             </dependencies>
         </profile>
 
