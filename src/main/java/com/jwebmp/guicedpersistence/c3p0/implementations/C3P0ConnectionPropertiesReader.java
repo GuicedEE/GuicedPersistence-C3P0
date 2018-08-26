@@ -1,6 +1,6 @@
 package com.jwebmp.guicedpersistence.c3p0.implementations;
 
-import com.jwebmp.guicedpersistence.db.PropertiesEntityManagerReader;
+import com.jwebmp.guicedpersistence.services.PropertiesEntityManagerReader;
 import com.oracle.jaxb21.PersistenceUnit;
 
 import java.util.HashMap;
@@ -27,40 +27,9 @@ public class C3P0ConnectionPropertiesReader
 	private static int defaultMaxStatements = 50;
 	private static int defaultTimeout = 1800;
 
-	@Override
-	public Map<String, String> processProperties(PersistenceUnit persistenceUnit, Properties properties)
-	{
-		Map<String, String> props = new HashMap<>();
-		if (!properties.containsKey(minSize))
-		{
-			props.put(minSize, Integer.toString(defaultMinSize));
-		}
-		if (!properties.containsKey(maxSize))
-		{
-			props.put(maxSize, Integer.toString(defaultMaxSize));
-		}
-		if (!properties.containsKey(acquireIncrement))
-		{
-			props.put(acquireIncrement, Integer.toString(defaultIncrementSize));
-		}
-		if (!properties.containsKey(idleTestPeriod))
-		{
-			props.put(idleTestPeriod, Integer.toString(defaultIdleTestPeriod));
-		}
-		if (!properties.containsKey(max_statements))
-		{
-			props.put(max_statements, Integer.toString(defaultMaxStatements));
-		}
-		if (!properties.containsKey(minSize))
-		{
-			props.put(timeout, Integer.toString(defaultTimeout));
-		}
-		return props;
-	}
-
 	public static int getDefaultMinSize()
 	{
-		return defaultMinSize;
+		return C3P0ConnectionPropertiesReader.defaultMinSize;
 	}
 
 	public static void setDefaultMinSize(int defaultMinSize)
@@ -70,7 +39,7 @@ public class C3P0ConnectionPropertiesReader
 
 	public static int getDefaultMaxSize()
 	{
-		return defaultMaxSize;
+		return C3P0ConnectionPropertiesReader.defaultMaxSize;
 	}
 
 	public static void setDefaultMaxSize(int defaultMaxSize)
@@ -80,7 +49,7 @@ public class C3P0ConnectionPropertiesReader
 
 	public static int getDefaultIncrementSize()
 	{
-		return defaultIncrementSize;
+		return C3P0ConnectionPropertiesReader.defaultIncrementSize;
 	}
 
 	public static void setDefaultIncrementSize(int defaultIncrementSize)
@@ -90,7 +59,7 @@ public class C3P0ConnectionPropertiesReader
 
 	public static int getDefaultIdleTestPeriod()
 	{
-		return defaultIdleTestPeriod;
+		return C3P0ConnectionPropertiesReader.defaultIdleTestPeriod;
 	}
 
 	public static void setDefaultIdleTestPeriod(int defaultIdleTestPeriod)
@@ -100,7 +69,7 @@ public class C3P0ConnectionPropertiesReader
 
 	public static int getDefaultMaxStatements()
 	{
-		return defaultMaxStatements;
+		return C3P0ConnectionPropertiesReader.defaultMaxStatements;
 	}
 
 	public static void setDefaultMaxStatements(int defaultMaxStatements)
@@ -110,11 +79,42 @@ public class C3P0ConnectionPropertiesReader
 
 	public static int getDefaultTimeout()
 	{
-		return defaultTimeout;
+		return C3P0ConnectionPropertiesReader.defaultTimeout;
 	}
 
 	public static void setDefaultTimeout(int defaultTimeout)
 	{
 		C3P0ConnectionPropertiesReader.defaultTimeout = defaultTimeout;
+	}
+
+	@Override
+	public Map<String, String> processProperties(PersistenceUnit persistenceUnit, Properties properties)
+	{
+		Map<String, String> props = new HashMap<>();
+		if (!properties.containsKey(C3P0ConnectionPropertiesReader.minSize))
+		{
+			props.put(C3P0ConnectionPropertiesReader.minSize, Integer.toString(C3P0ConnectionPropertiesReader.defaultMinSize));
+		}
+		if (!properties.containsKey(C3P0ConnectionPropertiesReader.maxSize))
+		{
+			props.put(C3P0ConnectionPropertiesReader.maxSize, Integer.toString(C3P0ConnectionPropertiesReader.defaultMaxSize));
+		}
+		if (!properties.containsKey(C3P0ConnectionPropertiesReader.acquireIncrement))
+		{
+			props.put(C3P0ConnectionPropertiesReader.acquireIncrement, Integer.toString(C3P0ConnectionPropertiesReader.defaultIncrementSize));
+		}
+		if (!properties.containsKey(C3P0ConnectionPropertiesReader.idleTestPeriod))
+		{
+			props.put(C3P0ConnectionPropertiesReader.idleTestPeriod, Integer.toString(C3P0ConnectionPropertiesReader.defaultIdleTestPeriod));
+		}
+		if (!properties.containsKey(C3P0ConnectionPropertiesReader.max_statements))
+		{
+			props.put(C3P0ConnectionPropertiesReader.max_statements, Integer.toString(C3P0ConnectionPropertiesReader.defaultMaxStatements));
+		}
+		if (!properties.containsKey(C3P0ConnectionPropertiesReader.minSize))
+		{
+			props.put(C3P0ConnectionPropertiesReader.timeout, Integer.toString(C3P0ConnectionPropertiesReader.defaultTimeout));
+		}
+		return props;
 	}
 }
