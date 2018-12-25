@@ -1,7 +1,7 @@
 package com.jwebmp.guicedpersistence.c3p0;
 
-import com.jwebmp.guicedpersistence.db.DatabaseModule;
 import com.jwebmp.guicedpersistence.db.ConnectionBaseInfo;
+import com.jwebmp.guicedpersistence.db.DatabaseModule;
 import com.jwebmp.guicedpersistence.jpa.JPAConnectionBaseInfo;
 import com.oracle.jaxb21.PersistenceUnit;
 
@@ -9,15 +9,14 @@ import javax.validation.constraints.NotNull;
 import java.lang.annotation.Annotation;
 import java.util.Properties;
 
-public class TestDBPrivateModule
-		extends DatabaseModule<TestDBPrivateModule>
+public class TestC3P0DBTest2PrivateModule
+		extends DatabaseModule<TestC3P0DBTest2PrivateModule>
 {
-
 	@NotNull
 	@Override
 	protected String getPersistenceUnitName()
 	{
-		return "guiceinjectionh2test";
+		return "c3p0unittest_2";
 	}
 
 	@NotNull
@@ -38,6 +37,6 @@ public class TestDBPrivateModule
 	@Override
 	protected Class<? extends Annotation> getBindingAnnotation()
 	{
-		return TestCustomPersistenceLoader.class;
+		return TestCustomPersistenceLoader2.class;
 	}
 }

@@ -32,7 +32,6 @@
             <artifactId>guiced-persistence-jpa</artifactId>
             <classifier>${jwebmp.runtime.classifier}</classifier>
             <version>${project.version}</version>
-            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -85,6 +84,18 @@
             <type>jar</type>
         </dependency>
 
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>mchange-commons-java</artifactId>
+            <version>0.2.15</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.5.2</version>
+        </dependency>
+        
     </dependencies>
 
     <scm>
