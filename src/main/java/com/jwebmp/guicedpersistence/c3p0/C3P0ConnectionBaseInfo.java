@@ -1,13 +1,31 @@
 package com.jwebmp.guicedpersistence.c3p0;
 
+import com.jwebmp.guicedpersistence.c3p0.implementations.C3P0ConnectionPropertiesReader;
+import com.jwebmp.guicedpersistence.db.ConnectionBaseInfo;
 import com.jwebmp.guicedpersistence.jpa.JPAConnectionBaseInfo;
+import com.jwebmp.logger.LogFactory;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.oracle.jaxb21.PersistenceUnit;
 
 import javax.sql.DataSource;
+import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class C3P0ConnectionBaseInfo
 		extends JPAConnectionBaseInfo
 {
+	private static final Logger log = LogFactory.getLog(C3P0ConnectionBaseInfo.class.getName());
+
+	@Override
+	public ConnectionBaseInfo populateFromProperties(PersistenceUnit unit, Properties filteredProperties)
+	{
+		ConnectionBaseInfo cbi = super.populateFromProperties(unit, filteredProperties);
+		C3P0ConnectionPropertiesReader.getPersistenceUnitSpecificMappings()
+		                              .put(unit.getName(), new C3P0ConnectionPropertiesReader());
+		return cbi;
+	}
+
 	@Override
 	public DataSource toPooledDatasource()
 	{
@@ -20,7 +38,7 @@ public class C3P0ConnectionBaseInfo
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				log.log(Level.WARNING, "Cannot set driver class for C3P0 Combo Pooled Data Source", e);
 			}
 		}
 

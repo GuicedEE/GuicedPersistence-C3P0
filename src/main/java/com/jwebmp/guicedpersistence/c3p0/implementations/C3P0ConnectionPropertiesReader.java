@@ -310,6 +310,7 @@ public class C3P0ConnectionPropertiesReader
 		                                                                                                                  .equals(PersistenceUnitTransactionType.RESOURCE_LOCAL)))
 		{
 			incomingProperties.put("hibernate.connection.provider_class", "org.hibernate.connection.C3P0ConnectionProvider");
+
 			if (!incomingProperties.containsKey(C3P0ConnectionPropertiesReader.minSize))
 			{
 				incomingProperties.put(C3P0ConnectionPropertiesReader.minSize, Integer.toString(C3P0ConnectionPropertiesReader.defaultMinSize));

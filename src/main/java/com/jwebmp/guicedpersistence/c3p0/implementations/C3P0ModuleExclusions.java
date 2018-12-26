@@ -16,6 +16,7 @@ public class C3P0ModuleExclusions
 	{
 		Set<String> strings = new HashSet<>();
 		strings.add("c3p0-*");
+		strings.add("mchange-commons-*");
 		strings.add("hibernate-c3p0-*");
 		return strings;
 	}
@@ -24,14 +25,8 @@ public class C3P0ModuleExclusions
 	public @NotNull Set<String> excludeModules()
 	{
 		Set<String> strings = new HashSet<>();
-
 		strings.add("com.jwebmp.guicedpersistence.c3p0");
-
-		strings.add("com.jwebmp.guicedpersistence");
-		strings.add("com.jwebmp.guicedpersistence.readers.hibernateproperties");
-		strings.add("com.jwebmp.guicedinjection");
-		strings.add("java.validation");
-
+		strings.add("c3p0");
 		return strings;
 	}
 }
