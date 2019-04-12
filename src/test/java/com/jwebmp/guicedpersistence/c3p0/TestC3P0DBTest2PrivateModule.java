@@ -23,14 +23,14 @@ public class TestC3P0DBTest2PrivateModule
 	@Override
 	protected ConnectionBaseInfo getConnectionBaseInfo(PersistenceUnit unit, Properties filteredProperties)
 	{
-		return new JPAConnectionBaseInfo().setPersistenceUnitName(unit.getName());
+		return new C3P0ConnectionBaseInfo().setPersistenceUnitName(unit.getName());
 	}
 
 	@NotNull
 	@Override
 	protected String getJndiMapping()
 	{
-		return "jdbc/jndi";
+		return "jdbc/jndi2";
 	}
 
 	@NotNull
