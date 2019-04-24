@@ -110,8 +110,8 @@
             <id>jdk8</id>
             <dependencies>
                 <dependency>
-                    <groupId>javax.transaction</groupId>
-                    <artifactId>jta</artifactId>
+                    <groupId>com.jwebmp.thirdparty</groupId>
+                    <artifactId>javax.transaction</artifactId>
                 </dependency>
             </dependencies>
 
