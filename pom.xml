@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.jwebmp.guicedee.persistence</groupId>
+        <groupId>com.jwebmp.jpms.guicedee.persistence</groupId>
         <artifactId>persistence-parent</artifactId>
         <version>0.0.0_0-SNAPSHOT</version>
     </parent>
@@ -21,13 +21,13 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.jwebmp.guicedee.persistence</groupId>
+            <groupId>com.jwebmp.jpms.guicedee.persistence</groupId>
             <artifactId>guiced-persistence-hibernateproperties-reader</artifactId>
             <type>jar</type>
             </dependency>
 
         <dependency>
-            <groupId>com.jwebmp.guicedee.persistence</groupId>
+            <groupId>com.jwebmp.jpms.guicedee.persistence</groupId>
             <artifactId>guiced-persistence-jpa</artifactId>
             <type>jar</type>
             </dependency>
@@ -60,13 +60,13 @@
             </dependency>
 
         <dependency>
-            <groupId>com.jwebmp.jpms.thirdparty.hibernate</groupId>
+            <groupId>com.jwebmp.jpms.thirdparty</groupId>
             <artifactId>hibernate-core</artifactId>
             <type>jar</type>
             </dependency>
 
         <dependency>
-            <groupId>com.jwebmp.jpms.thirdparty.hibernate</groupId>
+            <groupId>com.jwebmp.jpms.thirdparty</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
             <type>jar</type>
             </dependency>
@@ -75,6 +75,7 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-c3p0</artifactId>
             <type>jar</type>
+
             </dependency>
 
         <dependency>

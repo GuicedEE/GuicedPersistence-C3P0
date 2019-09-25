@@ -10,6 +10,8 @@ module com.jwebmp.guicedpersistence.c3p0 {
 	requires com.jwebmp.guicedpersistence.jpa;
 	requires c3p0;
 
+	requires java.persistence;
+
 	provides com.jwebmp.guicedpersistence.services.IPropertiesEntityManagerReader with com.jwebmp.guicedpersistence.c3p0.implementations.C3P0ConnectionPropertiesReader;
 
 	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.guicedpersistence.c3p0.implementations.C3P0ModuleExclusions;
