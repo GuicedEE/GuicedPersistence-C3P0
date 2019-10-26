@@ -1,8 +1,8 @@
-package com.jwebmp.guicedpersistence.c3p0;
+package com.guicedee.guicedpersistence.c3p0;
 
-import com.jwebmp.guicedpersistence.db.ConnectionBaseInfo;
-import com.jwebmp.guicedpersistence.db.DatabaseModule;
-import com.jwebmp.guicedpersistence.jpa.JPAConnectionBaseInfo;
+import com.guicedee.guicedpersistence.db.ConnectionBaseInfo;
+import com.guicedee.guicedpersistence.db.DatabaseModule;
+import com.guicedee.guicedpersistence.jpa.JPAConnectionBaseInfo;
 import com.oracle.jaxb21.PersistenceUnit;
 
 import javax.validation.constraints.NotNull;

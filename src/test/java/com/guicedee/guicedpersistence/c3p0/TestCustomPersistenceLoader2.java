@@ -1,4 +1,4 @@
-package com.jwebmp.guicedpersistence.c3p0;
+package com.guicedee.guicedpersistence.c3p0;
 
 import com.google.inject.BindingAnnotation;
 
@@ -9,7 +9,7 @@ import java.lang.annotation.*;
 @Inherited
 @Documented
 @BindingAnnotation
-public @interface TestCustomPersistenceLoader
+public @interface TestCustomPersistenceLoader2
 {
 
 }

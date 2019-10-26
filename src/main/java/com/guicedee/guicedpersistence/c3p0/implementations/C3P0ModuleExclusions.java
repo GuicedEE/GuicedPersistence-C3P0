@@ -1,7 +1,7 @@
-package com.jwebmp.guicedpersistence.c3p0.implementations;
+package com.guicedee.guicedpersistence.c3p0.implementations;
 
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
+import com.guicedee.guicedinjection.interfaces.IGuiceScanJarExclusions;
+import com.guicedee.guicedinjection.interfaces.IGuiceScanModuleExclusions;
 
 import javax.validation.constraints.NotNull;
 import java.util.HashSet;
@@ -25,7 +25,7 @@ public class C3P0ModuleExclusions
 	public @NotNull Set<String> excludeModules()
 	{
 		Set<String> strings = new HashSet<>();
-		strings.add("com.jwebmp.guicedpersistence.c3p0");
+		strings.add("com.guicedee.guicedpersistence.c3p0");
 		strings.add("c3p0");
 		return strings;
 	}

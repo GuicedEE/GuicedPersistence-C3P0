@@ -1,6 +1,6 @@
-package com.jwebmp.guicedpersistence.c3p0.implementations;
+package com.guicedee.guicedpersistence.c3p0.implementations;
 
-import com.jwebmp.guicedpersistence.services.IPropertiesEntityManagerReader;
+import com.guicedee.guicedpersistence.services.IPropertiesEntityManagerReader;
 import com.oracle.jaxb21.PersistenceUnit;
 import com.oracle.jaxb21.PersistenceUnitTransactionType;
 
@@ -275,7 +275,7 @@ public class C3P0ConnectionPropertiesReader
 	 *
 	 * @return The string,string map to apply
 	 *
-	 * @see com.jwebmp.guicedpersistence.services.IPropertiesEntityManagerReader#processProperties(PersistenceUnit, Properties)
+	 * @see com.guicedee.guicedpersistence.services.IPropertiesEntityManagerReader#processProperties(PersistenceUnit, Properties)
 	 */
 	@Override
 	public Map<String, String> processProperties(PersistenceUnit persistenceUnit, Properties incomingProperties)

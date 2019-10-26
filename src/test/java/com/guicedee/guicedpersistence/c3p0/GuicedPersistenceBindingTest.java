@@ -1,8 +1,8 @@
-package com.jwebmp.guicedpersistence.c3p0;
+package com.guicedee.guicedpersistence.c3p0;
 
 import com.google.inject.Key;
-import com.jwebmp.guicedinjection.GuiceContext;
-import com.jwebmp.logger.LogFactory;
+import com.guicedee.guicedinjection.GuiceContext;
+import com.guicedee.logger.LogFactory;
 import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;

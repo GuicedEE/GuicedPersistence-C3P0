@@ -8,7 +8,6 @@ module com.guicedee.guicedpersistence.c3p0 {
 	requires java.validation;
 	requires java.sql;
 	requires com.guicedee.guicedpersistence.jpa;
-	requires c3p0;
 	requires com.google.guice;
 
 	requires java.persistence;

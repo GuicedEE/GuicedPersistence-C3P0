@@ -1,9 +1,9 @@
-package com.jwebmp.guicedpersistence.c3p0;
+package com.guicedee.guicedpersistence.c3p0;
 
-import com.jwebmp.guicedpersistence.c3p0.implementations.C3P0ConnectionPropertiesReader;
-import com.jwebmp.guicedpersistence.db.ConnectionBaseInfo;
-import com.jwebmp.guicedpersistence.jpa.JPAConnectionBaseInfo;
-import com.jwebmp.logger.LogFactory;
+import com.guicedee.guicedpersistence.c3p0.implementations.C3P0ConnectionPropertiesReader;
+import com.guicedee.guicedpersistence.db.ConnectionBaseInfo;
+import com.guicedee.guicedpersistence.jpa.JPAConnectionBaseInfo;
+import com.guicedee.logger.LogFactory;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.oracle.jaxb21.PersistenceUnit;
 
