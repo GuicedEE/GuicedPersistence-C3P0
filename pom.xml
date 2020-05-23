@@ -23,19 +23,7 @@
     <dependencies>
         <dependency>
             <groupId>com.guicedee.persistence</groupId>
-            <artifactId>guiced-persistence-hibernateproperties-reader</artifactId>
-            <type>jar</type>
-        </dependency>
-
-        <dependency>
-            <groupId>com.guicedee.persistence</groupId>
-            <artifactId>guiced-persistence-jpa</artifactId>
-            <type>jar</type>
-        </dependency>
-
-        <dependency>
-            <groupId>com.guicedee.services</groupId>
-            <artifactId>hibernate-core</artifactId>
+            <artifactId>guiced-persistence</artifactId>
             <type>jar</type>
         </dependency>
 
@@ -147,7 +135,6 @@
             </plugin>
         </plugins>
     </build>
-
 
 
 </project>
