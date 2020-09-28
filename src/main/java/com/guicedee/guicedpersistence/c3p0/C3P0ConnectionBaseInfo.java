@@ -5,7 +5,7 @@ import com.guicedee.guicedpersistence.db.ConnectionBaseInfo;
 import com.guicedee.guicedpersistence.jpa.JPAConnectionBaseInfo;
 import com.guicedee.logger.LogFactory;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import com.oracle.jaxb21.PersistenceUnit;
+import org.hibernate.jpa.boot.internal.ParsedPersistenceXmlDescriptor;
 
 import javax.sql.DataSource;
 import java.util.Properties;
@@ -18,7 +18,7 @@ public class C3P0ConnectionBaseInfo
 	private static final Logger log = LogFactory.getLog(C3P0ConnectionBaseInfo.class.getName());
 
 	@Override
-	public ConnectionBaseInfo populateFromProperties(PersistenceUnit unit, Properties filteredProperties)
+	public ConnectionBaseInfo populateFromProperties(ParsedPersistenceXmlDescriptor unit, Properties filteredProperties)
 	{
 		ConnectionBaseInfo cbi = super.populateFromProperties(unit, filteredProperties);
 		C3P0ConnectionPropertiesReader.getPersistenceUnitSpecificMappings()

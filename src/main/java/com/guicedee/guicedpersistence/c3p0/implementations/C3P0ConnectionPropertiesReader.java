@@ -1,9 +1,9 @@
 package com.guicedee.guicedpersistence.c3p0.implementations;
 
 import com.guicedee.guicedpersistence.services.IPropertiesEntityManagerReader;
-import com.oracle.jaxb21.PersistenceUnit;
-import com.oracle.jaxb21.PersistenceUnitTransactionType;
+import org.hibernate.jpa.boot.internal.ParsedPersistenceXmlDescriptor;
 
+import javax.persistence.spi.PersistenceUnitTransactionType;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -275,10 +275,10 @@ public class C3P0ConnectionPropertiesReader
 	 *
 	 * @return The string,string map to apply
 	 *
-	 * @see com.guicedee.guicedpersistence.services.IPropertiesEntityManagerReader#processProperties(PersistenceUnit, Properties)
+	 * @see com.guicedee.guicedpersistence.services.IPropertiesEntityManagerReader#processProperties(ParsedPersistenceXmlDescriptor, Properties)
 	 */
 	@Override
-	public Map<String, String> processProperties(PersistenceUnit persistenceUnit, Properties incomingProperties)
+	public Map<String, String> processProperties(ParsedPersistenceXmlDescriptor persistenceUnit, Properties incomingProperties)
 	{
 		Map<String, String> props = new HashMap<>();
 		C3P0ConnectionPropertiesReader.getDefaultProperties()
@@ -303,7 +303,7 @@ public class C3P0ConnectionPropertiesReader
 	 *
 	 * @return Map String   ,       String
 	 */
-	public Map<String, String> process(PersistenceUnit persistenceUnit, Properties incomingProperties)
+	public Map<String, String> process(ParsedPersistenceXmlDescriptor persistenceUnit, Properties incomingProperties)
 	{
 		Map<String, String> props = new HashMap<>();
 		if (persistenceUnit.getJtaDataSource() == null && (persistenceUnit.getTransactionType() == null || persistenceUnit.getTransactionType()

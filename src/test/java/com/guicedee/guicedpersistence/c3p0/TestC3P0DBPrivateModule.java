@@ -2,8 +2,7 @@ package com.guicedee.guicedpersistence.c3p0;
 
 import com.guicedee.guicedpersistence.db.ConnectionBaseInfo;
 import com.guicedee.guicedpersistence.db.DatabaseModule;
-import com.guicedee.guicedpersistence.jpa.JPAConnectionBaseInfo;
-import com.oracle.jaxb21.PersistenceUnit;
+import org.hibernate.jpa.boot.internal.ParsedPersistenceXmlDescriptor;
 
 import javax.validation.constraints.NotNull;
 import java.lang.annotation.Annotation;
@@ -21,7 +20,7 @@ public class TestC3P0DBPrivateModule
 
 	@NotNull
 	@Override
-	protected ConnectionBaseInfo getConnectionBaseInfo(PersistenceUnit unit, Properties filteredProperties)
+	protected ConnectionBaseInfo getConnectionBaseInfo(ParsedPersistenceXmlDescriptor unit, Properties filteredProperties)
 	{
 		return new C3P0ConnectionBaseInfo().setPersistenceUnitName(unit.getName());
 	}
