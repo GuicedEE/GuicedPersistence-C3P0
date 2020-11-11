@@ -5,7 +5,7 @@ import com.guicedee.guicedinjection.GuiceContext;
 import com.guicedee.logger.LogFactory;
 import org.junit.jupiter.api.Test;
 
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 import javax.sql.DataSource;
 import java.util.logging.Level;
 

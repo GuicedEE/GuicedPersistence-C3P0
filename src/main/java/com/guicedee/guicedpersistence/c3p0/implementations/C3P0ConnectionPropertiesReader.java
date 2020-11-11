@@ -3,7 +3,7 @@ package com.guicedee.guicedpersistence.c3p0.implementations;
 import com.guicedee.guicedpersistence.services.IPropertiesEntityManagerReader;
 import org.hibernate.jpa.boot.internal.ParsedPersistenceXmlDescriptor;
 
-import javax.persistence.spi.PersistenceUnitTransactionType;
+import jakarta.persistence.spi.PersistenceUnitTransactionType;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
