@@ -85,6 +85,7 @@
                                     <include>com.mchange:c3p0</include>
                                 </includes>
                             </artifactSet>
+
                         </configuration>
                     </execution>
                 </executions>
