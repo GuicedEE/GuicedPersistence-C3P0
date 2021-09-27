@@ -27,6 +27,12 @@
         </dependency>
 
         <dependency>
+            <groupId>com.guicedee</groupId>
+            <artifactId>guiced-injection</artifactId>
+        </dependency>
+
+
+        <dependency>
             <groupId>com.guicedee.services</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
         </dependency>
