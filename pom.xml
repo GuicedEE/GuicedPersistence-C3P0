@@ -13,7 +13,7 @@
     <groupId>com.guicedee.persistence</groupId>
     <artifactId>guiced-persistence-c3p0</artifactId>
     <packaging>jar</packaging>
-
+    <version>0.0.0_0-SNAPSHOT</version>
     <name>Guiced Persistence - C3P0</name>
     <description>Enables C3P0 with Hibernate connections in the GuicedPersistence provider
         Requires JDK 8 and up
