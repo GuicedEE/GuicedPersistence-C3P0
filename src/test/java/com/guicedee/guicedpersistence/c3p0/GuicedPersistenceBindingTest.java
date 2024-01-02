@@ -2,19 +2,16 @@ package com.guicedee.guicedpersistence.c3p0;
 
 import com.google.inject.Key;
 import com.guicedee.guicedinjection.GuiceContext;
-import com.guicedee.logger.LogFactory;
+import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.Test;
 
-import jakarta.persistence.EntityManager;
 import javax.sql.DataSource;
-import java.util.logging.Level;
 
 public class GuicedPersistenceBindingTest
 {
 	@Test
 	public void testMe() throws InterruptedException
 	{
-		LogFactory.configureConsoleSingleLineOutput(Level.FINE);
 		GuiceContext.inject();
 
 		EntityManager em = GuiceContext.get(Key.get(EntityManager.class, TestCustomPersistenceLoader.class));

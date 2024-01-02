@@ -3,8 +3,8 @@ package com.guicedee.guicedpersistence.c3p0;
 import com.guicedee.guicedpersistence.c3p0.implementations.C3P0ConnectionPropertiesReader;
 import com.guicedee.guicedpersistence.db.ConnectionBaseInfo;
 import com.guicedee.guicedpersistence.jpa.JPAConnectionBaseInfo;
-import com.guicedee.logger.LogFactory;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import lombok.extern.java.Log;
 import org.hibernate.jpa.boot.internal.ParsedPersistenceXmlDescriptor;
 
 import javax.sql.DataSource;
@@ -12,10 +12,10 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+@Log
 public class C3P0ConnectionBaseInfo
 		extends JPAConnectionBaseInfo
 {
-	private static final Logger log = LogFactory.getLog(C3P0ConnectionBaseInfo.class.getName());
 
 	@Override
 	public ConnectionBaseInfo populateFromProperties(ParsedPersistenceXmlDescriptor unit, Properties filteredProperties)

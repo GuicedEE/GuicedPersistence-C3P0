@@ -1,9 +1,9 @@
 package com.guicedee.guicedpersistence.c3p0.implementations;
 
 import com.guicedee.guicedpersistence.services.IPropertiesEntityManagerReader;
+import jakarta.persistence.PersistenceUnitTransactionType;
 import org.hibernate.jpa.boot.internal.ParsedPersistenceXmlDescriptor;
 
-import jakarta.persistence.spi.PersistenceUnitTransactionType;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -12,7 +12,7 @@ import java.util.Properties;
  * Adds in the necessary properties to enable C3P0 for Hibernate
  */
 public class C3P0ConnectionPropertiesReader
-		implements IPropertiesEntityManagerReader
+				implements IPropertiesEntityManagerReader
 {
 	/**
 	 * A map of properties specific to a persistence unit
@@ -22,14 +22,14 @@ public class C3P0ConnectionPropertiesReader
 	 * The default properties to apply
 	 */
 	private static final C3P0ConnectionPropertiesReader defaultProperties = new C3P0ConnectionPropertiesReader();
-
+	
 	private static final String minSize = "hibernate.c3p0.min_size";
 	private static final String maxSize = "hibernate.c3p0.max_size";
 	private static final String acquireIncrement = "hibernate.c3p0.acquire_increment";
 	private static final String idleTestPeriod = "hibernate.c3p0.idle_test_period";
 	private static final String max_statements = "hibernate.c3p0.max_statements";
 	private static final String timeout = "hibernate.c3p0.timeout";
-
+	
 	/**
 	 * The default minimum pool size
 	 */
@@ -54,7 +54,7 @@ public class C3P0ConnectionPropertiesReader
 	 * The default connection timeout
 	 */
 	private static int defaultTimeout = 1800;
-
+	
 	/**
 	 * Method getMinSize returns the minSize of this C3P0ConnectionPropertiesReader object.
 	 *
@@ -64,7 +64,7 @@ public class C3P0ConnectionPropertiesReader
 	{
 		return minSize;
 	}
-
+	
 	/**
 	 * Method getMaxSize returns the maxSize of this C3P0ConnectionPropertiesReader object.
 	 *
@@ -74,7 +74,7 @@ public class C3P0ConnectionPropertiesReader
 	{
 		return maxSize;
 	}
-
+	
 	/**
 	 * Method getAcquireIncrement returns the acquireIncrement of this C3P0ConnectionPropertiesReader object.
 	 *
@@ -84,7 +84,7 @@ public class C3P0ConnectionPropertiesReader
 	{
 		return acquireIncrement;
 	}
-
+	
 	/**
 	 * Method getIdleTestPeriod returns the idleTestPeriod of this C3P0ConnectionPropertiesReader object.
 	 *
@@ -94,7 +94,7 @@ public class C3P0ConnectionPropertiesReader
 	{
 		return idleTestPeriod;
 	}
-
+	
 	/**
 	 * Method getMax_statements returns the max_statements of this C3P0ConnectionPropertiesReader object.
 	 *
@@ -104,7 +104,7 @@ public class C3P0ConnectionPropertiesReader
 	{
 		return max_statements;
 	}
-
+	
 	/**
 	 * Method getTimeout returns the timeout of this C3P0ConnectionPropertiesReader object.
 	 *
@@ -114,7 +114,7 @@ public class C3P0ConnectionPropertiesReader
 	{
 		return timeout;
 	}
-
+	
 	/**
 	 * Method getDefaultMinSize returns the defaultMinSize of this C3P0ConnectionPropertiesReader object.
 	 * <p>
@@ -126,20 +126,19 @@ public class C3P0ConnectionPropertiesReader
 	{
 		return defaultMinSize;
 	}
-
+	
 	/**
 	 * Method setDefaultMinSize sets the defaultMinSize of this C3P0ConnectionPropertiesReader object.
 	 * <p>
 	 * The default minimum pool size
 	 *
-	 * @param defaultMinSize
-	 * 		the defaultMinSize of this C3P0ConnectionPropertiesReader object.
+	 * @param defaultMinSize the defaultMinSize of this C3P0ConnectionPropertiesReader object.
 	 */
 	public static void setDefaultMinSize(int defaultMinSize)
 	{
 		C3P0ConnectionPropertiesReader.defaultMinSize = defaultMinSize;
 	}
-
+	
 	/**
 	 * Method getDefaultMaxSize returns the defaultMaxSize of this C3P0ConnectionPropertiesReader object.
 	 * <p>
@@ -151,20 +150,19 @@ public class C3P0ConnectionPropertiesReader
 	{
 		return defaultMaxSize;
 	}
-
+	
 	/**
 	 * Method setDefaultMaxSize sets the defaultMaxSize of this C3P0ConnectionPropertiesReader object.
 	 * <p>
 	 * The default minimum max size
 	 *
-	 * @param defaultMaxSize
-	 * 		the defaultMaxSize of this C3P0ConnectionPropertiesReader object.
+	 * @param defaultMaxSize the defaultMaxSize of this C3P0ConnectionPropertiesReader object.
 	 */
 	public static void setDefaultMaxSize(int defaultMaxSize)
 	{
 		C3P0ConnectionPropertiesReader.defaultMaxSize = defaultMaxSize;
 	}
-
+	
 	/**
 	 * Method getDefaultIncrementSize returns the defaultIncrementSize of this C3P0ConnectionPropertiesReader object.
 	 * <p>
@@ -176,20 +174,19 @@ public class C3P0ConnectionPropertiesReader
 	{
 		return defaultIncrementSize;
 	}
-
+	
 	/**
 	 * Method setDefaultIncrementSize sets the defaultIncrementSize of this C3P0ConnectionPropertiesReader object.
 	 * <p>
 	 * The default idle test period
 	 *
-	 * @param defaultIncrementSize
-	 * 		the defaultIncrementSize of this C3P0ConnectionPropertiesReader object.
+	 * @param defaultIncrementSize the defaultIncrementSize of this C3P0ConnectionPropertiesReader object.
 	 */
 	public static void setDefaultIncrementSize(int defaultIncrementSize)
 	{
 		C3P0ConnectionPropertiesReader.defaultIncrementSize = defaultIncrementSize;
 	}
-
+	
 	/**
 	 * Method getDefaultIdleTestPeriod returns the defaultIdleTestPeriod of this C3P0ConnectionPropertiesReader object.
 	 * <p>
@@ -201,20 +198,19 @@ public class C3P0ConnectionPropertiesReader
 	{
 		return defaultIdleTestPeriod;
 	}
-
+	
 	/**
 	 * Method setDefaultIdleTestPeriod sets the defaultIdleTestPeriod of this C3P0ConnectionPropertiesReader object.
 	 * <p>
 	 * The default idle test period
 	 *
-	 * @param defaultIdleTestPeriod
-	 * 		the defaultIdleTestPeriod of this C3P0ConnectionPropertiesReader object.
+	 * @param defaultIdleTestPeriod the defaultIdleTestPeriod of this C3P0ConnectionPropertiesReader object.
 	 */
 	public static void setDefaultIdleTestPeriod(int defaultIdleTestPeriod)
 	{
 		C3P0ConnectionPropertiesReader.defaultIdleTestPeriod = defaultIdleTestPeriod;
 	}
-
+	
 	/**
 	 * Method getDefaultMaxStatements returns the defaultMaxStatements of this C3P0ConnectionPropertiesReader object.
 	 * <p>
@@ -226,20 +222,19 @@ public class C3P0ConnectionPropertiesReader
 	{
 		return defaultMaxStatements;
 	}
-
+	
 	/**
 	 * Method setDefaultMaxStatements sets the defaultMaxStatements of this C3P0ConnectionPropertiesReader object.
 	 * <p>
 	 * The default max statements
 	 *
-	 * @param defaultMaxStatements
-	 * 		the defaultMaxStatements of this C3P0ConnectionPropertiesReader object.
+	 * @param defaultMaxStatements the defaultMaxStatements of this C3P0ConnectionPropertiesReader object.
 	 */
 	public static void setDefaultMaxStatements(int defaultMaxStatements)
 	{
 		C3P0ConnectionPropertiesReader.defaultMaxStatements = defaultMaxStatements;
 	}
-
+	
 	/**
 	 * Method getDefaultTimeout returns the defaultTimeout of this C3P0ConnectionPropertiesReader object.
 	 * <p>
@@ -251,30 +246,25 @@ public class C3P0ConnectionPropertiesReader
 	{
 		return defaultTimeout;
 	}
-
+	
 	/**
 	 * Method setDefaultTimeout sets the defaultTimeout of this C3P0ConnectionPropertiesReader object.
 	 * <p>
 	 * The default connection timeout
 	 *
-	 * @param defaultTimeout
-	 * 		the defaultTimeout of this C3P0ConnectionPropertiesReader object.
+	 * @param defaultTimeout the defaultTimeout of this C3P0ConnectionPropertiesReader object.
 	 */
 	public static void setDefaultTimeout(int defaultTimeout)
 	{
 		C3P0ConnectionPropertiesReader.defaultTimeout = defaultTimeout;
 	}
-
+	
 	/**
 	 * Goes through the defaults then applies per annotated unit
 	 *
-	 * @param persistenceUnit
-	 * 		The unit
-	 * @param incomingProperties
-	 * 		The properties
-	 *
+	 * @param persistenceUnit    The unit
+	 * @param incomingProperties The properties
 	 * @return The string,string map to apply
-	 *
 	 * @see com.guicedee.guicedpersistence.services.IPropertiesEntityManagerReader#processProperties(ParsedPersistenceXmlDescriptor, Properties)
 	 */
 	@Override
@@ -282,35 +272,38 @@ public class C3P0ConnectionPropertiesReader
 	{
 		Map<String, String> props = new HashMap<>();
 		C3P0ConnectionPropertiesReader.getDefaultProperties()
-		                              .process(persistenceUnit, incomingProperties);
+						.process(persistenceUnit, incomingProperties);
 		if (C3P0ConnectionPropertiesReader.getPersistenceUnitSpecificMappings()
-		                                  .containsKey(persistenceUnit.getName()))
+						.containsKey(persistenceUnit.getName()))
 		{
 			C3P0ConnectionPropertiesReader.getPersistenceUnitSpecificMappings()
-			                              .get(persistenceUnit.getName())
-			                              .process(persistenceUnit, incomingProperties);
+							.get(persistenceUnit.getName())
+							.process(persistenceUnit, incomingProperties);
 		}
 		return props;
 	}
-
+	
+	@Override
+	public boolean applicable(ParsedPersistenceXmlDescriptor persistenceUnit)
+	{
+		return true;
+	}
+	
 	/**
 	 * Method process ...
 	 *
-	 * @param persistenceUnit
-	 * 		of type PersistenceUnit
-	 * @param incomingProperties
-	 * 		of type Properties
-	 *
+	 * @param persistenceUnit    of type PersistenceUnit
+	 * @param incomingProperties of type Properties
 	 * @return Map String   ,       String
 	 */
 	public Map<String, String> process(ParsedPersistenceXmlDescriptor persistenceUnit, Properties incomingProperties)
 	{
 		Map<String, String> props = new HashMap<>();
-		if (persistenceUnit.getJtaDataSource() == null && (persistenceUnit.getTransactionType() == null || persistenceUnit.getTransactionType()
-		                                                                                                                  .equals(PersistenceUnitTransactionType.RESOURCE_LOCAL)))
+		if (persistenceUnit.getJtaDataSource() == null && (persistenceUnit.getTransactionType() == null ||
+						persistenceUnit.getTransactionType().toString().toLowerCase().equals(PersistenceUnitTransactionType.RESOURCE_LOCAL.toString().toLowerCase())))
 		{
 			incomingProperties.put("hibernate.connection.provider_class", "org.hibernate.connection.C3P0ConnectionProvider");
-
+			
 			if (!incomingProperties.containsKey(C3P0ConnectionPropertiesReader.minSize))
 			{
 				incomingProperties.put(C3P0ConnectionPropertiesReader.minSize, Integer.toString(C3P0ConnectionPropertiesReader.defaultMinSize));
@@ -338,7 +331,7 @@ public class C3P0ConnectionPropertiesReader
 		}
 		return props;
 	}
-
+	
 	/**
 	 * Method getDefaultProperties returns the defaultProperties of this C3P0ConnectionPropertiesReader object.
 	 * <p>
@@ -350,7 +343,7 @@ public class C3P0ConnectionPropertiesReader
 	{
 		return defaultProperties;
 	}
-
+	
 	/**
 	 * Method getPersistenceUnitSpecificMappings returns the persistenceUnitSpecificMappings of this C3P0ConnectionPropertiesReader object.
 	 * <p>
