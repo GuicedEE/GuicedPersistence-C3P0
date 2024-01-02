@@ -12,6 +12,8 @@ public class GuicedPersistenceBindingTest
 	@Test
 	public void testMe() throws InterruptedException
 	{
+		GuiceContext.registerModule(new TestC3P0DBPrivateModule());
+		GuiceContext.registerModule(new TestC3P0DBTest2PrivateModule());
 		GuiceContext.inject();
 
 		EntityManager em = GuiceContext.get(Key.get(EntityManager.class, TestCustomPersistenceLoader.class));

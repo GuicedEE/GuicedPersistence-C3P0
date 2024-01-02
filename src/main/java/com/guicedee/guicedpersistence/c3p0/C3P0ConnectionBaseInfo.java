@@ -10,7 +10,6 @@ import org.hibernate.jpa.boot.internal.ParsedPersistenceXmlDescriptor;
 import javax.sql.DataSource;
 import java.util.Properties;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 @Log
 public class C3P0ConnectionBaseInfo
