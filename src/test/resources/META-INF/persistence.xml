@@ -6,7 +6,7 @@
 
     <persistence-unit name="c3p0unittest" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>com.guicedee.guicedpersistence.c3p0.entities.Entity1</class>
+        <class>com.guicedee.guicedpersistence.c3p0.test.entities.Entity1</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
@@ -23,7 +23,7 @@
 
     <persistence-unit name="c3p0unittest_2"  transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>com.guicedee.guicedpersistence.c3p0.entities.Entity2</class>
+        <class>com.guicedee.guicedpersistence.c3p0.test.entities.Entity2</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>

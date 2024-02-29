@@ -1,5 +1,6 @@
-package com.guicedee.guicedpersistence.c3p0;
+package com.guicedee.guicedpersistence.c3p0.test;
 
+import com.guicedee.guicedpersistence.c3p0.*;
 import com.guicedee.guicedpersistence.db.ConnectionBaseInfo;
 import com.guicedee.guicedpersistence.db.DatabaseModule;
 import org.hibernate.jpa.boot.internal.ParsedPersistenceXmlDescriptor;
@@ -8,14 +9,14 @@ import jakarta.validation.constraints.NotNull;
 import java.lang.annotation.Annotation;
 import java.util.Properties;
 
-public class TestC3P0DBPrivateModule
-		extends DatabaseModule<TestC3P0DBPrivateModule>
+public class TestC3P0DBTest2PrivateModule
+		extends DatabaseModule<TestC3P0DBTest2PrivateModule>
 {
 	@NotNull
 	@Override
 	protected String getPersistenceUnitName()
 	{
-		return "c3p0unittest";
+		return "c3p0unittest_2";
 	}
 
 	@NotNull
@@ -29,13 +30,13 @@ public class TestC3P0DBPrivateModule
 	@Override
 	protected String getJndiMapping()
 	{
-		return "jdbc/jndi";
+		return "jdbc/jndi2";
 	}
 
 	@NotNull
 	@Override
 	protected Class<? extends Annotation> getBindingAnnotation()
 	{
-		return TestCustomPersistenceLoader.class;
+		return TestCustomPersistenceLoader2.class;
 	}
 }
