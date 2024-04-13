@@ -32,11 +32,4 @@ public class TestC3P0DBTest2PrivateModule
 	{
 		return "jdbc/jndi2";
 	}
-
-	@NotNull
-	@Override
-	protected Class<? extends Annotation> getBindingAnnotation()
-	{
-		return TestCustomPersistenceLoader2.class;
-	}
 }

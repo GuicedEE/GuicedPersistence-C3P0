@@ -2,7 +2,7 @@ package com.guicedee.guicedpersistence.c3p0;
 
 import com.guicedee.guicedpersistence.c3p0.implementations.C3P0ConnectionPropertiesReader;
 import com.guicedee.guicedpersistence.db.ConnectionBaseInfo;
-import com.guicedee.guicedpersistence.jpa.JPAConnectionBaseInfo;
+import com.guicedee.guicedpersistence.jta.JPAConnectionBaseInfo;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import lombok.extern.java.Log;
 import org.hibernate.jpa.boot.internal.ParsedPersistenceXmlDescriptor;
