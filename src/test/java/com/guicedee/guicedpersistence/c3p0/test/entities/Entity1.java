@@ -1,11 +1,11 @@
-package com.guicedee.guicedpersistence.c3p0.entities;
+package com.guicedee.guicedpersistence.c3p0.test.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Entity2
+public class Entity1
 {
 	@Id
 	@Column
@@ -16,7 +16,7 @@ public class Entity2
 		return idColumn;
 	}
 
-	public Entity2 setIdColumn(int idColumn)
+	public Entity1 setIdColumn(int idColumn)
 	{
 		this.idColumn = idColumn;
 		return this;

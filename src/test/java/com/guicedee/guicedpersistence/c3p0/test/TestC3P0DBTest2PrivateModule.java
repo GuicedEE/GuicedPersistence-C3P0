@@ -1,5 +1,6 @@
-package com.guicedee.guicedpersistence.c3p0;
+package com.guicedee.guicedpersistence.c3p0.test;
 
+import com.guicedee.guicedpersistence.c3p0.*;
 import com.guicedee.guicedpersistence.db.ConnectionBaseInfo;
 import com.guicedee.guicedpersistence.db.DatabaseModule;
 import org.hibernate.jpa.boot.internal.ParsedPersistenceXmlDescriptor;
@@ -30,12 +31,5 @@ public class TestC3P0DBTest2PrivateModule
 	protected String getJndiMapping()
 	{
 		return "jdbc/jndi2";
-	}
-
-	@NotNull
-	@Override
-	protected Class<? extends Annotation> getBindingAnnotation()
-	{
-		return TestCustomPersistenceLoader2.class;
 	}
 }

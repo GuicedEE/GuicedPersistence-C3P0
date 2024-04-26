@@ -1,4 +1,4 @@
-package com.guicedee.guicedpersistence.c3p0;
+package com.guicedee.guicedpersistence.c3p0.test;
 
 import com.google.inject.BindingAnnotation;
 
