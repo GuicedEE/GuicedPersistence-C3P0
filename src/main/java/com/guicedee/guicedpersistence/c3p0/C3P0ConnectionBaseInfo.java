@@ -6,6 +6,7 @@ import com.guicedee.guicedpersistence.jta.JPAConnectionBaseInfo;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import lombok.extern.java.Log;
 import org.hibernate.jpa.boot.internal.ParsedPersistenceXmlDescriptor;
+import org.hibernate.jpa.boot.spi.PersistenceUnitDescriptor;
 
 import javax.sql.DataSource;
 import java.util.Properties;
@@ -17,7 +18,7 @@ public class C3P0ConnectionBaseInfo
 {
 
 	@Override
-	public ConnectionBaseInfo populateFromProperties(ParsedPersistenceXmlDescriptor unit, Properties filteredProperties)
+	public ConnectionBaseInfo populateFromProperties(PersistenceUnitDescriptor unit, Properties filteredProperties)
 	{
 		ConnectionBaseInfo cbi = super.populateFromProperties(unit, filteredProperties);
 		C3P0ConnectionPropertiesReader.getPersistenceUnitSpecificMappings()

@@ -3,6 +3,7 @@ package com.guicedee.guicedpersistence.c3p0.implementations;
 import com.guicedee.guicedpersistence.services.IPropertiesEntityManagerReader;
 import jakarta.persistence.PersistenceUnitTransactionType;
 import org.hibernate.jpa.boot.internal.ParsedPersistenceXmlDescriptor;
+import org.hibernate.jpa.boot.spi.PersistenceUnitDescriptor;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -265,10 +266,10 @@ public class C3P0ConnectionPropertiesReader
 	 * @param persistenceUnit    The unit
 	 * @param incomingProperties The properties
 	 * @return The string,string map to apply
-	 * @see com.guicedee.guicedpersistence.services.IPropertiesEntityManagerReader#processProperties(ParsedPersistenceXmlDescriptor, Properties)
+	 * @see com.guicedee.guicedpersistence.services.IPropertiesEntityManagerReader#processProperties(PersistenceUnitDescriptor, Properties)
 	 */
 	@Override
-	public Map<String, String> processProperties(ParsedPersistenceXmlDescriptor persistenceUnit, Properties incomingProperties)
+	public Map<String, String> processProperties(PersistenceUnitDescriptor persistenceUnit, Properties incomingProperties)
 	{
 		Map<String, String> props = new HashMap<>();
 		C3P0ConnectionPropertiesReader.getDefaultProperties()
@@ -284,7 +285,7 @@ public class C3P0ConnectionPropertiesReader
 	}
 	
 	@Override
-	public boolean applicable(ParsedPersistenceXmlDescriptor persistenceUnit)
+	public boolean applicable(PersistenceUnitDescriptor persistenceUnit)
 	{
 		return true;
 	}
@@ -296,7 +297,7 @@ public class C3P0ConnectionPropertiesReader
 	 * @param incomingProperties of type Properties
 	 * @return Map String   ,       String
 	 */
-	public Map<String, String> process(ParsedPersistenceXmlDescriptor persistenceUnit, Properties incomingProperties)
+	public Map<String, String> process(PersistenceUnitDescriptor persistenceUnit, Properties incomingProperties)
 	{
 		Map<String, String> props = new HashMap<>();
 		if (persistenceUnit.getJtaDataSource() == null && (persistenceUnit.getTransactionType() == null ||
